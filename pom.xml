@@ -3,7 +3,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>io.opentracing.contrib.hrpose</groupId>
+    <groupId>io.opentracing.contrib.hprose</groupId>
     <artifactId>opentracing-hprose-java</artifactId>
     <version>1.0</version>
 
@@ -51,7 +51,7 @@
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
-            <version>3.0.1</version>
+            <version>[3.0.1,)</version>
         </dependency>
         <dependency>
             <groupId>io.opentracing</groupId>

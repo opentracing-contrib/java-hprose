@@ -2,8 +2,6 @@ package io.opentracing.contrib.hprose;
 
 import io.opentracing.NoopTracerFactory;
 import io.opentracing.Tracer;
-
-import java.lang.reflect.Method;
 import java.util.Iterator;
 import java.util.ServiceLoader;
 import java.util.logging.Level;
