@@ -36,7 +36,7 @@ public class MyHproseServlet extends HproseServlet {
 }
 ```
 
-* By default, `HttpServiceTracingInvokeHandler` use java `ServiceLoader` to locate OpenTracing tracer implementation. The implementation must be **unique**, if more than one, any tracer implementations will be used.
+* By default, `HttpServiceTracingInvokeHandler` use java `ServiceLoader` to locate OpenTracing tracer implementation. The implementation must be **unique**, if more than one implemetations are found, `HttpServiceTracingInvokeHandler` don't use any of them, but swtich to NoopTracer.
 * if you want to use the particular tracer implementation, you can use `HttpServiceTracingInvokeHandler`'constructor to set the tracer instance. like this:
 ```java
 service.use(new HttpServiceTracingInvokeHandler(tracer));
