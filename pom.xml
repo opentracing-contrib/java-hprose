@@ -91,6 +91,36 @@
                     <encoding>${project.build.sourceEncoding}</encoding>
                 </configuration>
             </plugin>
+
+            <plugin>
+                <artifactId>maven-release-plugin</artifactId>
+                <configuration>
+                    <useReleaseProfile>false</useReleaseProfile>
+                    <autoVersionSubmodules>true</autoVersionSubmodules>
+                    <tagNameFormat>@{project.version}</tagNameFormat>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>io.zipkin.centralsync-maven-plugin</groupId>
+                <artifactId>centralsync-maven-plugin</artifactId>
+                <configuration>
+                    <subject>opentracing</subject>
+                    <repo>maven</repo>
+                    <packageName>io.opentracing.contrib.hprose</packageName>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
+
+    <distributionManagement>
+        <repository>
+            <id>bintray</id>
+            <url>https://api.bintray.com/maven/opentracing/maven/io.opentracing.contrib.hprose/;publish=1</url>
+        </repository>
+        <snapshotRepository>
+            <id>jfrog-snapshots</id>
+            <url>http://oss.jfrog.org/artifactory/oss-snapshot-local</url>
+        </snapshotRepository>
+    </distributionManagement>
+
 </project>
