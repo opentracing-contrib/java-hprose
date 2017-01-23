@@ -3,8 +3,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>io.opentracing.contrib.hprose</groupId>
-    <artifactId>opentracing-hprose-java</artifactId>
+    <groupId>io.opentracing.contrib</groupId>
+    <artifactId>java-hprose</artifactId>
     <version>1.0</version>
 
     <packaging>jar</packaging>
@@ -16,9 +16,9 @@
         </license>
     </licenses>
     <scm>
-        <connection>scm:git:https://github.com/hprose/hprose-opentracing.git</connection>
-        <developerConnection>scm:git:https://github.com/hprose/hprose-opentracing.git</developerConnection>
-        <url>https://github.com/hprose/hprose-opentracing</url>
+        <connection>scm:git:https://github.com/opentracing-contrib/java-hprose.git</connection>
+        <developerConnection>scm:git:https://github.com/opentracing-contrib/java-hprose.git</developerConnection>
+        <url>https://github.com/opentracing-contrib/java-hprose</url>
     </scm>
     <developers>
         <developer>
@@ -28,11 +28,17 @@
             <organization>hprose</organization>
             <organizationUrl>http://www.hprose.com</organizationUrl>
         </developer>
+        <developer>
+            <id>wu-sheng</id>
+            <name>Wu Sheng</name>
+            <email>wu.sheng@foxmail.com</email>
+            <url>https://wu-sheng.github.io/me/</url>
+        </developer>
     </developers>
 
     <issueManagement>
         <system>GitHub Issues</system>
-        <url>https://github.com/hprose/hprose-opentracing/issues</url>
+        <url>https://github.com/opentracing-contrib/java-hprose/issues</url>
     </issueManagement>
 
     <properties>
@@ -106,7 +112,7 @@
                 <configuration>
                     <subject>opentracing</subject>
                     <repo>maven</repo>
-                    <packageName>io.opentracing.contrib.hprose</packageName>
+                    <packageName>java-hprose</packageName>
                 </configuration>
             </plugin>
         </plugins>
@@ -115,7 +121,7 @@
     <distributionManagement>
         <repository>
             <id>bintray</id>
-            <url>https://api.bintray.com/maven/opentracing/maven/io.opentracing.contrib.hprose/;publish=1</url>
+            <url>https://api.bintray.com/maven/opentracing/maven/java-hprose/;publish=1</url>
         </repository>
         <snapshotRepository>
             <id>jfrog-snapshots</id>
