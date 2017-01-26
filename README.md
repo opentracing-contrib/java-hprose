@@ -1,6 +1,8 @@
 # java-hprose
 OpenTracing instrumentation for the Hprose Remote Object Service Engine
 
+[![Build Status](https://travis-ci.org/opentracing-contrib/java-hprose.svg?branch=master)](https://travis-ci.org/opentracing-contrib/java-hprose)
+
 ## Quick start
 This repo support the opentracing in hprose-java, if hprose-java use http or https as network protocol.
 

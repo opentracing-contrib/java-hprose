@@ -4,15 +4,15 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.opentracing.contrib</groupId>
-    <artifactId>java-hprose</artifactId>
+    <artifactId>opentracing-phrose</artifactId>
     <version>1.0</version>
 
     <packaging>jar</packaging>
 
     <licenses>
         <license>
-            <name>MIT License</name>
-            <url>https://raw.github.com/hprose/hprose-opentracing/master/LICENSE.md</url>
+            <name>Apache License Version 2.0</name>
+            <url>https://github.com/opentracing-contrib/java-hprose/blob/master/LICENSE</url>
         </license>
     </licenses>
     <scm>
@@ -112,7 +112,7 @@
                 <configuration>
                     <subject>opentracing</subject>
                     <repo>maven</repo>
-                    <packageName>java-hprose</packageName>
+                    <packageName>opentracing-phrose</packageName>
                 </configuration>
             </plugin>
         </plugins>
@@ -121,7 +121,7 @@
     <distributionManagement>
         <repository>
             <id>bintray</id>
-            <url>https://api.bintray.com/maven/opentracing/maven/java-hprose/;publish=1</url>
+            <url>https://api.bintray.com/maven/opentracing/maven/opentracing-phrose/;publish=1</url>
         </repository>
         <snapshotRepository>
             <id>jfrog-snapshots</id>
