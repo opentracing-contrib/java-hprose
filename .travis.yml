@@ -20,6 +20,7 @@ addons:
 
 before_install:
   - chmod a+x mvnw
+  - chmod a+x travis/publish.sh
   # allocate commits to CI, not the owner of the deploy key
   - git config user.name "opentracingci"
   - git config user.email "opentracingci+opentracing@googlegroups.com"
