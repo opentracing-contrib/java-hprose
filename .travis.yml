@@ -19,6 +19,7 @@ addons:
       - oracle-java8-installer
 
 before_install:
+  - chmod a+x mvnw
   # allocate commits to CI, not the owner of the deploy key
   - git config user.name "opentracingci"
   - git config user.email "opentracingci+opentracing@googlegroups.com"
