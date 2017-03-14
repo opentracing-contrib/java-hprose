@@ -27,7 +27,7 @@ public class HttpServiceTracingInvokeHandler implements InvokeHandler {
     private final Tracer tracer;
 
     /**
-     * Use {@TracerLoader} to get a tracer implementation.
+     * Use {@link TracerLoader} to get a tracer implementation.
      */
     public HttpServiceTracingInvokeHandler()  {
         tracer = TracerLoader.loadTracer();

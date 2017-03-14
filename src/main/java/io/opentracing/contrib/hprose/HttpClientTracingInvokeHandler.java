@@ -32,7 +32,7 @@ public class HttpClientTracingInvokeHandler implements InvokeHandler {
     private final Tracer tracer;
 
     /**
-     * Use {@TracerLoader} to get a tracer implementation.
+     * Use {@link TracerLoader} to get a tracer implementation.
      */
     public HttpClientTracingInvokeHandler() {
         tracer = TracerLoader.loadTracer();

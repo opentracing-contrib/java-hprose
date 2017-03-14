@@ -17,7 +17,7 @@ import io.opentracing.Tracer;
 public class HttpClientTracingExInvokeHandler extends HttpClientTracingInvokeHandler {
 
     /**
-     * Use {@TracerLoader} to get a tracer implementation.
+     * Use {@link TracerLoader} to get a tracer implementation.
      */
     public HttpClientTracingExInvokeHandler() {
         super();
