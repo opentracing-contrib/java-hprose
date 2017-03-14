@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.opentracing.contrib</groupId>
-    <artifactId>opentracing-phrose</artifactId>
+    <artifactId>opentracing-hprose</artifactId>
     <version>1.0</version>
 
     <packaging>jar</packaging>
@@ -112,7 +112,7 @@
                 <configuration>
                     <subject>opentracing</subject>
                     <repo>maven</repo>
-                    <packageName>opentracing-phrose</packageName>
+                    <packageName>opentracing-hprose</packageName>
                 </configuration>
             </plugin>
 
@@ -150,7 +150,7 @@
     <distributionManagement>
         <repository>
             <id>bintray</id>
-            <url>https://api.bintray.com/maven/opentracing/maven/opentracing-phrose/;publish=1</url>
+            <url>https://api.bintray.com/maven/opentracing/maven/opentracing-hprose/;publish=1</url>
         </repository>
         <snapshotRepository>
             <id>jfrog-snapshots</id>
