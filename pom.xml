@@ -3,22 +3,22 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>io.opentracing.contrib.hprose</groupId>
-    <artifactId>opentracing-hprose-java</artifactId>
+    <groupId>io.opentracing.contrib</groupId>
+    <artifactId>opentracing-hprose</artifactId>
     <version>1.0</version>
 
     <packaging>jar</packaging>
 
     <licenses>
         <license>
-            <name>MIT License</name>
-            <url>https://raw.github.com/hprose/hprose-opentracing/master/LICENSE.md</url>
+            <name>Apache License Version 2.0</name>
+            <url>https://github.com/opentracing-contrib/java-hprose/blob/master/LICENSE</url>
         </license>
     </licenses>
     <scm>
-        <connection>scm:git:https://github.com/hprose/hprose-opentracing.git</connection>
-        <developerConnection>scm:git:https://github.com/hprose/hprose-opentracing.git</developerConnection>
-        <url>https://github.com/hprose/hprose-opentracing</url>
+        <connection>scm:git:https://github.com/opentracing-contrib/java-hprose.git</connection>
+        <developerConnection>scm:git:https://github.com/opentracing-contrib/java-hprose.git</developerConnection>
+        <url>https://github.com/opentracing-contrib/java-hprose</url>
     </scm>
     <developers>
         <developer>
@@ -28,11 +28,17 @@
             <organization>hprose</organization>
             <organizationUrl>http://www.hprose.com</organizationUrl>
         </developer>
+        <developer>
+            <id>wu-sheng</id>
+            <name>Wu Sheng</name>
+            <email>wu.sheng@foxmail.com</email>
+            <url>https://wu-sheng.github.io/me/</url>
+        </developer>
     </developers>
 
     <issueManagement>
         <system>GitHub Issues</system>
-        <url>https://github.com/hprose/hprose-opentracing/issues</url>
+        <url>https://github.com/opentracing-contrib/java-hprose/issues</url>
     </issueManagement>
 
     <properties>
@@ -91,6 +97,65 @@
                     <encoding>${project.build.sourceEncoding}</encoding>
                 </configuration>
             </plugin>
+
+            <plugin>
+                <artifactId>maven-release-plugin</artifactId>
+                <configuration>
+                    <useReleaseProfile>false</useReleaseProfile>
+                    <autoVersionSubmodules>true</autoVersionSubmodules>
+                    <tagNameFormat>@{project.version}</tagNameFormat>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>io.zipkin.centralsync-maven-plugin</groupId>
+                <artifactId>centralsync-maven-plugin</artifactId>
+                <configuration>
+                    <subject>opentracing</subject>
+                    <repo>maven</repo>
+                    <packageName>opentracing-hprose</packageName>
+                </configuration>
+            </plugin>
+
+            <!-- Creates source jar -->
+            <plugin>
+                <artifactId>maven-source-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <!-- Creates javadoc jar -->
+            <plugin>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <configuration>
+                    <failOnError>false</failOnError>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                        <phase>package</phase>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
+
+    <distributionManagement>
+        <repository>
+            <id>bintray</id>
+            <url>https://api.bintray.com/maven/opentracing/maven/opentracing-hprose/;publish=1</url>
+        </repository>
+        <snapshotRepository>
+            <id>jfrog-snapshots</id>
+            <url>http://oss.jfrog.org/artifactory/oss-snapshot-local</url>
+        </snapshotRepository>
+    </distributionManagement>
+
 </project>
