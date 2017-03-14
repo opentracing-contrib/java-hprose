@@ -5,7 +5,7 @@
 
     <groupId>io.opentracing.contrib</groupId>
     <artifactId>opentracing-hprose</artifactId>
-    <version>1.0</version>
+    <version>1.0.0-SNAPSHOT</version>
 
     <packaging>jar</packaging>
 
@@ -88,6 +88,7 @@
                     <target>${compiler.version}</target>
                     <encoding>${project.build.sourceEncoding}</encoding>
                 </configuration>
+                <version>3.6.1</version>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -105,6 +106,7 @@
                     <autoVersionSubmodules>true</autoVersionSubmodules>
                     <tagNameFormat>@{project.version}</tagNameFormat>
                 </configuration>
+                <version>2.5.3</version>
             </plugin>
             <plugin>
                 <groupId>io.zipkin.centralsync-maven-plugin</groupId>
@@ -127,6 +129,7 @@
                         </goals>
                     </execution>
                 </executions>
+                <version>3.0.1</version>
             </plugin>
             <!-- Creates javadoc jar -->
             <plugin>
@@ -143,6 +146,7 @@
                         <phase>package</phase>
                     </execution>
                 </executions>
+                <version>2.10.4</version>
             </plugin>
         </plugins>
     </build>
