@@ -105,6 +105,9 @@
                     <useReleaseProfile>false</useReleaseProfile>
                     <autoVersionSubmodules>true</autoVersionSubmodules>
                     <tagNameFormat>@{project.version}</tagNameFormat>
+                    <checkModificationExcludes>
+                        <checkModificationExclude>/travis/publish.sh</checkModificationExclude>
+                    </checkModificationExcludes>
                 </configuration>
                 <version>2.5.3</version>
             </plugin>
