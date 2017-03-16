@@ -2,11 +2,17 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <!-- Artifact identification -->
     <groupId>io.opentracing.contrib</groupId>
     <artifactId>opentracing-hprose</artifactId>
     <version>0.1.1-SNAPSHOT</version>
-
     <packaging>jar</packaging>
+
+    <!-- Project information -->
+    <name>OpenTracing Hprose instrumentation</name>
+    <description>OpenTracing instrumentation for the Hprose Remote Object Service Engine</description>
+    <url>https://github.com/opentracing-contrib/java-hprose</url>
+    <inceptionYear>2017</inceptionYear>
 
     <licenses>
         <license>
@@ -14,12 +20,20 @@
             <url>https://github.com/opentracing-contrib/java-hprose/blob/master/LICENSE</url>
         </license>
     </licenses>
+    
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <compiler.version>1.6</compiler.version>
+    </properties>
+
     <scm>
         <connection>scm:git:https://github.com/opentracing-contrib/java-hprose.git</connection>
         <developerConnection>scm:git:https://github.com/opentracing-contrib/java-hprose.git</developerConnection>
         <url>https://github.com/opentracing-contrib/java-hprose</url>
-      <tag>HEAD</tag>
-  </scm>
+        <tag>HEAD</tag>
+    </scm>
+    
     <developers>
         <developer>
             <id>andot</id>
@@ -40,12 +54,6 @@
         <system>GitHub Issues</system>
         <url>https://github.com/opentracing-contrib/java-hprose/issues</url>
     </issueManagement>
-
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <compiler.version>1.6</compiler.version>
-    </properties>
 
     <dependencies>
         <dependency>
